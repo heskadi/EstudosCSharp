@@ -235,7 +235,190 @@ namespace PrimeiroProjeto {
             Console.WriteLine(bask);
             */
 
-            // ENTRADA DE DADOS EM C#
+            // ENTRADA DE DADOS EM C# Parte 1
+
+            // Entrada de dados básicos.
+            /*
+            string frase = Console.ReadLine();
+            string x = Console.ReadLine();
+            string y = Console.ReadLine();
+            string z = Console.ReadLine();
+
+            Console.WriteLine("Você digitou " + frase);
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(z);
+
+            // Comando split
+            string a = Console.ReadLine();
+            // Split funciona com vetores para separar o valores específicados em uma variavel.
+            string[] vet = a.Split(' ');
+
+            // Pode dar WriteLine de duas formas, ambas aparecendo o mesmo resultado.
+            // Forma 1
+            Console.WriteLine(vet[0]);
+            Console.WriteLine(vet[1]);
+            Console.WriteLine(vet[2]);
+            // Forma 2
+            string p1 = vet[0];
+            string p2 = vet[1];
+            string p3 = vet[2];
+
+            Console.WriteLine(p1);
+            Console.WriteLine(p2);
+            Console.WriteLine(p3);
+
+            // É possível também aplicar o split diretamente na aplicação do vetor
+            string[] v = Console.ReadLine().Split(' ');
+            Console.WriteLine(v[0]);
+            Console.WriteLine(v[1]);
+            Console.WriteLine(v[2]);
+            */
+
+            // ENTRADA DE DADOS EM C# Parte 2
+            /*
+            // o .Parse serve para coverter tipos númericos para string e vice-versa
+            int n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine(n1);
+            char ch = char.Parse(Console.ReadLine());
+            Console.WriteLine(ch);
+            // Caso seu computador esteja em portugues, é necessario utilizar a virgula ao invés do ponto quando preencher o double
+            // Exceto quando utilizamos o InvariantCulture. Nesse caso, será utilizado o ponto
+            double n2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine(n2.ToString("F2", CultureInfo.InvariantCulture));
+
+
+            // É possível utilizar o método Split em uma string e repartir em tipos diferentes de vetores utilizando o .Parse
+            string[] v = Console.ReadLine().Split(' ');
+
+            // Podemos da WriteLine dessas duas formas
+            // Sem definir variaveis relacionadas as posições no vetor
+            Console.WriteLine(v[0]);
+            Console.WriteLine(char.Parse(v[1]));
+            Console.WriteLine(int.Parse(v[2]));
+            Console.WriteLine(double.Parse(v[3], CultureInfo.InvariantCulture));
+
+            // Definindo as variaveis do vetor
+            string nome = v[0];
+            char sexo = char.Parse(v[1]);
+            int idade = int.Parse(v[2]);
+            double altura = double.Parse(v[3], CultureInfo.InvariantCulture);
+            Console.WriteLine(nome);
+            Console.WriteLine(sexo);
+            Console.WriteLine(idade);
+            Console.WriteLine(altura.ToString("F2", CultureInfo.InvariantCulture));
+            */
+
+            // EXERCÍCIO DE FIXAÇÃO:
+            /*
+            Console.WriteLine("Entre com o seu nome completo: ");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Quantos quartos tem na sua casa? ");
+            int quartos = int.Parse(Console.ReadLine());
+            Console.WriteLine("Entre com o preço de um produto: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Entre seu último nome, idade e altura (mesma linha)");
+            string[] v = Console.ReadLine().Split(' ');
+
+            string ultimo_nome = v[0];
+            int idade = int.Parse(v[1]);
+            double altura = double.Parse(v[2], CultureInfo.InvariantCulture);
+
+            Console.WriteLine(nome);
+            Console.WriteLine(quartos);
+            Console.WriteLine(preco.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(ultimo_nome);
+            Console.WriteLine(idade);
+            Console.WriteLine(altura.ToString("F2", CultureInfo.InvariantCulture));
+            */
+
+            //EXERCÍCIO 1:
+            /*
+            Console.WriteLine("Digite dois valores inteiros para serem somados (mesma linha): ");
+            string[] v = Console.ReadLine().Split(' ');
+            int n1 = int.Parse(v[0]);
+            int n2 = int.Parse(v[1]);
+            int n3 = n1 + n2;
+            Console.WriteLine(n1 + " + " + n2 + " = " + n3);
+            */
+
+            // EXERCÍCIO 2:
+            /*
+            double pi = 3.14159;
+            Console.WriteLine("Digite o valor do raio de um círculo para descobrirmos sua área: ");
+            double raio = double.Parse(Console.ReadLine());
+            double area = pi * Math.Pow(raio, 2);
+            Console.WriteLine("A área é: ");
+            Console.WriteLine("A = " + area.ToString("F4", CultureInfo.InvariantCulture));
+            */
+
+            // EXERCÍCIO 3:
+            /*
+            Console.WriteLine("Digite quatro valores inteiros para calcularmos a diferença: ");
+            string[] v = Console.ReadLine().Split(' ');
+            int a = int.Parse(v[0]);
+            int b = int.Parse(v[1]);
+            int c = int.Parse(v[2]);
+            int d = int.Parse(v[3]);
+
+            int dif = a * b - c * d;
+            Console.WriteLine("A diferença dos valores enviados é: ");
+            Console.WriteLine("Diferença = " + dif);
+            */
+
+            // EXERCÍCIO 4:
+            /*
+            Console.WriteLine("Digite o seu número de funcionário, número de horas trabalhadas e o valor que recebe por hora: ");
+            string[] v = Console.ReadLine().Split(' ');
+            int numero_funcionario = int.Parse(v[0]);
+            int horas_trabalhadas = int.Parse(v[1]);
+            double din_por_hora = double.Parse(v[2], CultureInfo.InvariantCulture);
+            double salario = horas_trabalhadas * din_por_hora;
+
+            Console.WriteLine("Número do funcionário: " + numero_funcionario);
+            Console.WriteLine("Salário: U$" + salario.ToString("F2", CultureInfo.InvariantCulture));
+            */
+
+            // EXERCÍCIO 5:
+            /*
+            Console.WriteLine("Digite o código da peça 1, o número de peças 1 e o valor unitário de peças 1: ");
+            string[] v1 = Console.ReadLine().Split(' ');
+            int cod_peca1 = int.Parse(v1[0]);
+            int num_peca1 = int.Parse(v1[1]);
+            double valor_peca1 = double.Parse(v1[2], CultureInfo.InvariantCulture);
+
+            Console.WriteLine("Digite o código da peça 2, o número de peças 2 e o valor unitário de peças 2: ");
+            string[] v2 = Console.ReadLine().Split(' ');
+            int cod_peca2 = int.Parse(v2[0]);
+            int num_peca2 = int.Parse(v2[1]);
+            double valor_peca2 = double.Parse(v2[2], CultureInfo.InvariantCulture);
+
+            double total = num_peca1 * valor_peca1 + num_peca2 * valor_peca2;
+            Console.WriteLine("O valor total a pagar é: R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
+            */
+
+            // EXERCÍCIO 6:
+            /*
+            Console.WriteLine("Digite os valores de A, B e C. Com isso mostraremos os cálculos a seguir: ");
+            string[] v = Console.ReadLine().Split(' ');
+            float A = float.Parse(v[0], CultureInfo.InvariantCulture);
+            float B = float.Parse(v[1], CultureInfo.InvariantCulture);
+            float C = float.Parse(v[2], CultureInfo.InvariantCulture);
+
+            float pi = 3.14159f;
+
+            float triangulo_ret = (A * C) / 2;
+            double circulo = pi * Math.Pow(C, 2);
+            float trapezio = ((A + B) * C) / 2;
+            double quadrado = Math.Pow(B, 2);
+            float retangulo = A * B;
+
+            Console.WriteLine("TRIANGULO: " + triangulo_ret.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("CIRCULO: " + circulo.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("TRAPEZIO: " + trapezio.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("QUADRADO: " + quadrado.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("RETANGULO: " + retangulo.ToString("F3", CultureInfo.InvariantCulture));
+            */
 
         }
     }
