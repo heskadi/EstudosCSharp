@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Runtime.Intrinsics.Arm;
 // Referência para o namespace chamado System. Que é o namespace padrão do .NET
 
 namespace PrimeiroProjeto {
@@ -420,6 +421,94 @@ namespace PrimeiroProjeto {
             Console.WriteLine("RETANGULO: " + retangulo.ToString("F3", CultureInfo.InvariantCulture));
             */
 
+
+            // OPERADORES COMPARATIVOS:
+            /*
+            int a = 10;
+            bool c1 = a < 10;
+            Console.WriteLine(c1);
+
+            bool c2 = a < 20;
+            Console.WriteLine(c2);
+
+            bool c3 = a > 10;
+            Console.WriteLine(c3);
+
+            bool c4 = a > 5;
+            Console.WriteLine(c4);
+
+            Console.WriteLine("--------------");
+
+            bool c5 = a <= 10;
+            Console.WriteLine(c5);
+
+            bool c6 = a >= 10;
+            Console.WriteLine(c6);
+
+            bool c7 = a == 10;
+            Console.WriteLine(c7);
+
+            bool c8 = a != 10;
+            Console.WriteLine(c8);
+            */
+
+            // OPERADORES LÓGICOS:
+            /*
+            bool c1 = 2 < 3 && 4 != 5;
+            Console.WriteLine(c1); // True
+
+            bool c2 = !(2 > 3) && 4 != 5;
+            Console.WriteLine(c2); // True
+
+            Console.WriteLine("--------------");
+            bool c3 = 10 < 5;
+            bool c4 = c1 || c2 && c3;
+            // Precendencia de &&(e) é maior que a de || (ou), logo && vai rodar primeiro
+            Console.WriteLine(c3);
+            Console.WriteLine(c4);
+            */
+
+            // ESTRUTURA CONDICIONAL:
+            int x = 10;
+            Console.WriteLine("Bom dia");
+            
+            if ( x > 5) {
+                Console.WriteLine("Boa tarde");
+            }
+
+            Console.WriteLine("Boa noite");
+
+            // DEMO 1:
+            Console.WriteLine("Escreva um número inteiro: ");
+            int y = int.Parse(Console.ReadLine());
+
+            if (y % 2 == 0) {
+                Console.WriteLine("Par");
+            } else {
+                Console.WriteLine("Impar");
+            }
+
+            // DEMO 2:
+            Console.WriteLine("Qual a hora atual? ");
+            int hora = int.Parse(Console.ReadLine());
+
+            if (hora < 12) {
+                Console.WriteLine("bom dia");
+            }
+            if (hora >= 12 && hora < 18) {
+                Console.WriteLine("boa tarde");
+            }
+            if (hora >= 18) {
+                Console.WriteLine("boa noite");
+            }
+            // Pode ser feito dessas duas formas, porém, a segunda é a mais correta
+            if (hora < 12) {
+                Console.WriteLine("Bom dia");
+            } else if (hora < 18) {
+                Console.WriteLine("Boa tarde");
+            } else {
+                Console.WriteLine("Boa noite");
+            }
         }
     }
 }
