@@ -469,6 +469,7 @@ namespace PrimeiroProjeto {
             */
 
             // ESTRUTURA CONDICIONAL:
+            /*
             int x = 10;
             Console.WriteLine("Bom dia");
             
@@ -509,6 +510,190 @@ namespace PrimeiroProjeto {
             } else {
                 Console.WriteLine("Boa noite");
             }
+            */
+
+            // ESCOPO E INICIALIZAÇÃO:
+            /*
+            // int = x;
+            // Quando a variável não é iniciada, o código não funciona. As variáveis tem que ser iniciadas antes de sua utilização.
+
+            double preco = double.Parse(Console.ReadLine());
+            double desconto = 0.0;
+
+            if (preco > 100.0) {
+                desconto = preco * 0.1;
+            }
+            Console.WriteLine(desconto);
+            // Variáveis escritas dentro de ifs só funcionam dentro do próprio if.
+            // Variáveis em escopos menores não são identificadas.
+            */
+
+            // EXERCÍCIOS PROPOSTOS 2:
+
+            // EXERCÍCIO 1:
+            /*
+            Console.WriteLine("Digite um número inteiro");
+            int x = int.Parse(Console.ReadLine());
+
+            if (x < 0) {
+                Console.WriteLine("Negativo");
+            } else {
+                Console.WriteLine("Não negativo");
+            }
+            */
+
+            // EXERCÍCIO 2:
+            /*
+            Console.WriteLine("Digite um número inteiro para saber se ele é impar ou par");
+            int x = int.Parse(Console.ReadLine());
+
+            if (x % 2 == 0) {
+                Console.WriteLine("Par");
+            } else {
+                Console.WriteLine("Impar");
+            }
+            */
+
+            // EXERCÍCIO 3:
+            /*
+            Console.WriteLine("Digite dois valores inteiro para sabermos se são multiplos: ");
+            string[] v = Console.ReadLine().Split(' ');
+            int A = int.Parse(v[0]);
+            int B = int.Parse(v[1]);
+
+            if (A % B == 0 || B % A == 0) {
+                Console.WriteLine("São multiplos");
+            } else {
+                Console.WriteLine("Não são multiplos");
+            }
+            */
+
+            // EXERCÍCIO 4:
+            /*
+            Console.WriteLine("Coloca o horário do começo e do fim do jogo(inteiro): ");
+            string[] v = Console.ReadLine().Split(' ');
+            int h_inicial = int.Parse(v[0]);
+            int h_final = int.Parse(v[1]);
+
+            int duracao;
+            if (h_inicial < h_final) {
+                duracao = h_final - h_inicial;
+            } else {
+                duracao = 24 - h_inicial + h_final;
+            }
+            Console.WriteLine("O jogo durou " + duracao + " hora(s)");
+            */
+
+            // EXERCÍCIO 5:
+            /*
+            Console.WriteLine(" -------------------------------------------- ");
+            Console.WriteLine("| **CÓDIGO** | **ESPECIFICAÇÃO** | **PREÇO** |");
+            Console.WriteLine("| ---------- | ----------------- | --------- |");
+            Console.WriteLine("| 1          | Cachorro Quente   | R$ 4.00   |");
+            Console.WriteLine("| 2          | X - Salada        | R$ 4.50   |");
+            Console.WriteLine("| 3          | X - Bacon         | R$ 5.00   |");
+            Console.WriteLine("| 4          | Torrada Simples   | R$ 2.00   |");
+            Console.WriteLine("| 5          | Refrigerante      | R$ 1.50   |");
+            Console.WriteLine(" -------------------------------------------- ");
+            Console.WriteLine("Digite o código do item que deseja e quantidade: ");
+            string[] v = Console.ReadLine().Split(' ');
+            int cod = int.Parse(v[0]);
+            int quant = int.Parse(v[1]);
+
+            double total;
+            if (cod == 1) {
+                total = quant * 4.0;
+            } else if (cod == 2) {
+                total = quant * 4.5;
+            } else if (cod == 3){
+                total = quant * 5.0;
+            } else if (cod == 4){
+                total = quant * 2.0;
+            } else {
+                total = quant * 1.5;
+            }
+
+            Console.WriteLine("Total: R$ " + total.ToString("F2", CultureInfo.InvariantCulture));
+            */
+
+            // EXERCÍCIO 6:
+            /*
+            double numero = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            if (numero < 0.0 || numero > 100.0) {
+                Console.WriteLine("Fora de intervalo");
+            }
+            else if (numero <= 25.0) {
+                Console.WriteLine("Intervalo [0,25]");
+            }
+            else if (numero <= 50.0) {
+                Console.WriteLine("Intervalo (25,50]");
+            }
+            else if (numero <= 75.0) {
+                Console.WriteLine("Intervalo (50,75]");
+            }
+            else {
+                Console.WriteLine("Intervalo (75,100]");
+            }
+            */
+
+            // EXERCÍCIO 7:
+            /*
+            string[] valores = Console.ReadLine().Split(' ');
+            double x = double.Parse(valores[0], CultureInfo.InvariantCulture);
+            double y = double.Parse(valores[1], CultureInfo.InvariantCulture);
+
+            if (x == 0.0 && y == 0.0) {
+                Console.WriteLine("Origem");
+            }
+            else if (x == 0.0) {
+                Console.WriteLine("Eixo Y");
+            }
+            else if (y == 0.0) {
+                Console.WriteLine("Eixo X");
+            }
+            else if (x > 0.0 && y > 0.0) {
+                Console.WriteLine("Q1");
+            }
+            else if (x < 0.0 && y > 0.0) {
+                Console.WriteLine("Q2");
+            }
+            else if (x < 0.0 && y < 0.0) {
+                Console.WriteLine("Q3");
+            }
+            else {
+                Console.WriteLine("Q4");
+            }
+            */
+
+            // ÉXERCÍCIO 8:
+            /*
+            double salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double imposto;
+            if (salario <= 2000.0) {
+                imposto = 0.0;
+            }
+            else if (salario <= 3000.0) {
+                imposto = (salario - 2000.0) * 0.08;
+            }
+            else if (salario <= 4500.0) {
+                imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
+            }
+            else {
+                imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+            }
+
+            if (imposto == 0.0) {
+                Console.WriteLine("Isento");
+            }
+            else {
+                Console.WriteLine("R$ " + imposto.ToString("F2", CultureInfo.InvariantCulture));
+            }
+            */
+
+
+
         }
     }
 }
